@@ -11,11 +11,12 @@ function createTweet(input) {
 	var data = input[0];
 	var quoteText = $(data.content).text().trim();
 	var quoteAuthor = data.title;
-	var tweetText = "Cytat dnia - " + quoteText + " Autor: " + quoteAuthor;
 
 	if(!quoteAuthor.length) {
-		quoteAuthor = "Autor nieznany";
+		quoteAuthor = "Autor nieznany";	
 	}
+
+	var tweetText = "Cytat dnia - " + quoteText + " Autor: " + quoteAuthor;	
 
 	if (tweetText.length > 280) { //Twitter w zeszłym roku zwiększył ilość znaków w tweecie to 280
 		getQuote();
